@@ -4,7 +4,7 @@ title:      Self-learning NoteBook
 subtitle:   Be happy to find a new way
 date:       2019-09-14
 author:     Henry
-header-img: img/MarkDown-bg.jpg
+header-img: img/post-bg-digital-native.jpg
 catalog: true
 tags:
     - Self-Learning
@@ -40,6 +40,7 @@ tags:
 &emsp;&emsp;大一一年绩点极度平庸，虽然下学期及时改过来，不过还是距离GPA4.0差那么一点，大二一定要上4.0，故一定要对时间安排与学习方法上做出更加详细的规划。
 ### 一周上课总结：
 &emsp;&emsp;感觉极度垃圾，上课根本就不想听课，感觉老师都在瞎逼逼还不如自学好，又逃不了课。然后回顾才发现自己是因为自己总是熬夜导致上课精神状态和自己心态对于上课的厌恶导致，感觉还是及时调整回来不要再浪费时间去做无用功比较好，毕竟大二时间超级有限。
+
 &emsp;&emsp;解决对策：
 >1. 手机交给张玮新，除模电外不带手机，记得用小本子记下教室位置。
 >2. 和上学期一样和茂哥在6：30到10：00图书馆呆着做课程作业学习，可以带耳机和MP3.
