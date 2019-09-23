@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Self-learning NoteBook
+title:      Self-learning NoteBook 1
 subtitle:   Be happy to find a new way
 date:       2019-09-14
 author:     Henry
