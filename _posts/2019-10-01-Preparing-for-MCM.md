@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Preparing for mcm
+title:      美赛准备PLAN
 subtitle:   好好干活
 date:       2019-10-01
 author:     Henry
