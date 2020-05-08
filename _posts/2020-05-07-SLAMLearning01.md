@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      <SLAM十四讲》第一次作业
+title:      《SLAM十四讲》第一次作业
 subtitle:   SLAM学习
 date:       2020-05-07
 author:     Henry
@@ -18,15 +18,17 @@ tags:
 对于未来的规划，个人目前会比较偏向于SLAM方向，完全是出于个人的兴趣，在阅读相关的文献资料后，我也十分认为SLAM在未来具有巨大的市场前景（自动驾驶，AR方向个人觉得都是未来趋势），因此选择以SLAM方向作为为了个人读研与工作的方向。
 
 个人对于自我学习的规划主要是：
-1.对于个人C++的提升，目前个人已经完成对于C++的入门学习（后面会补充个人学习笔记），在这一个阶段是对于算法的学习（算法与数据结构，后面会根据个人学习进度同步更新个人笔记），在下一阶段是完成LeetCode的刷题之路，个人会完成LeetCode教学视频与《剑指Offer》这本书与其中算法问题的解答（后面会根据个人的学习进度同步更新个人笔记），这一些个人希望在暑假前能够完成到**算法与数据结构**这一个阶段，在上学前（8月20号）能够完成对于LeetCode的刷题入门（个人十分认为算法是长期的道路），在大三时期能够用于LeetCode与Effective C++和More Effective C++书籍的学习，个人C++的基础至关重要。
 
-2.对于SLAM课程的学习，目前个人在学习的书籍是高翔的《SLAM十四讲》与其视频课程，个人目前的规划是观看其教学视频，阅读课本，然后完成所有其留下的课后题，这一个大约会持续到（7月15号，即为暑假前）。在暑假时期，个人会将个人所学实践与个人的项目，实体测试相关的算法效果与个人ROS的学习（计划是自行购买SLAM小车，后期改进并提供完整的方案开源），个人的实践会持续至开学前（8月20号）。同时，个人会再继续阅读相关书籍《概率机器人》《机器人感知》《计算机视觉中的多视图几何》《机器人学中的状态估计》等，个人觉得非常需要在暑假时期获得老师的指导。
+- 1. 对于个人C++的提升，目前个人已经完成对于C++的入门学习（后面会补充个人学习笔记），在这一个阶段是对于算法的学习（算法与数据结构，后面会根据个人学习进度同步更新个人笔记），在下一阶段是完成LeetCode的刷题之路，个人会完成LeetCode教学视频与《剑指Offer》这本书与其中算法问题的解答（后面会根据个人的学习进度同步更新个人笔记），这一些个人希望在暑假前能够完成到**算法与数据结构**这一个阶段，在上学前（8月20号）能够完成对于LeetCode的刷题入门（个人十分认为算法是长期的道路），在大三时期能够用于LeetCode与Effective C++和More Effective C++书籍的学习，个人C++的基础至关重要。
+
+- 2. 对于SLAM课程的学习，目前个人在学习的书籍是高翔的《SLAM十四讲》与其视频课程，个人目前的规划是观看其教学视频，阅读课本，然后完成所有其留下的课后题，这一个大约会持续到（7月15号，即为暑假前）。在暑假时期，个人会将个人所学实践与个人的项目，实体测试相关的算法效果与个人ROS的学习（计划是自行购买SLAM小车，后期改进并提供完整的方案开源），个人的实践会持续至开学前（8月20号）。同时，个人会再继续阅读相关书籍《概率机器人》《机器人感知》《计算机视觉中的多视图几何》《机器人学中的状态估计》等，个人觉得非常需要在暑假时期获得老师的指导。
 
 个人会将个人学习记录于此博客，用于自我积累与备忘录。
 
 ## SLAM十四讲第一次作业
 
 #### Ubuntu软件安装
+
 直接安装：
 ```shell
 sudo apt-get install {AppName}
@@ -80,72 +82,62 @@ deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe
 deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse
 ```
 
+#### 软件安装的位置
+
+- 一般在bash可以直接安装的都是在`usr/bin`文件夹中。
+- 要查找使用 `apt-get install` 安装的软件，一般会采用`dpkg -L`文件名的方式。
 
 上次看了一篇 [《从一道网易面试题浅谈OC线程安全》](https://www.jianshu.com/p/cec2a41aa0e7) 的博客，主要内容是：
 
-作者去网易面试，面试官出了一道面试题：下面代码会发生什么问题？
+#### Linux的环境变量
 
-```objc
-@property (nonatomic, strong) NSString *target;
-//....
-dispatch_queue_t queue = dispatch_queue_create("parallel", DISPATCH_QUEUE_CONCURRENT);
-for (int i = 0; i < 1000000 ; i++) {
-    dispatch_async(queue, ^{
-        self.target = [NSString stringWithFormat:@"ksddkjalkjd%d",i];
-    });
-}
+环境变量一般是指在操作系统中用来指定操作系统运行环境的一些参数，比如临时文件夹位置和系统文件夹位置等。因为一些参数可以被当做系统默认的设置，如此以来，在运行某个程序的时候就不需要再指定这些参数了。比如你总是使用某个程序，在命令行中使用时，每次运行这个程序你都要进入程序所在的目录启动程序。如果你将程序所在的目录加入环境变量后，运行程序时你只需要输入程序的名称，系统就会自动搜索到你程序的位置，而不会再出现`command not found`这样的问题了。
+
+#### 在Linux修改环境变量
+
+- 1. 直接修改`/etc/enviroment`文件，这种方法的作用域是全局的，永久性的。打开 `etc/environment` 这一个文件，在其中修改即可。
+- 2. 修改/etc/profile文件，这种方法的作用域是全局的，永久性的。这个文件不是保存环境变量信息的文件，在登录时，系统只是根据它的内容对环境变量进行设置，使用：
+```shell
+export PATH=$PATH:[your path1]:[your path2]:[...]  
+export PATH=[your path1]:[your path2]:[...]:$PATH  
 ```
+其中，各个`PATH`之间用冒号分隔，`$PATH`指代添加your path前的环境变量。
 
-答案是：会 crash。
+#### Linux目录结构
 
-我们来看看对`target`属性（`strong`修饰）进行赋值，相当与 MRC 中的
+> ～/：是home目录
+> /：是根目录
 
-```
-- (void)setTarget:(NSString *)target {
-    if (target == _target) return;
-    id pre = _target;
-    [target retain];//1.先保留新值
-    _target = target;//2.再进行赋值
-    [pre release];//3.释放旧值
-}
-```
+进入home目录是直接`cd ~/`，home目录中储存的是用户的数据，就类似于windows中的user文件夹
+进入根目录是直接`cd /`，储存的是系统，类似于C盘，所有软件安装于此。
 
-因为在 *并行队列* `DISPATCH_QUEUE_CONCURRENT` 中*异步* `dispatch_async` 对 `target`属性进行赋值，就会导致 target 已经被 `release`了，还会执行 `release`。这就是向已释放内存对象发送消息而发生 crash 。
+**Linux的文件结构主要如下**
 
+Linux文件结构图
+![图片](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.linuxidc.com%2FLinux%2F2019-03%2F157194.htm&psig=AOvVaw2GPlE37VbjavZfqUhlT91U&ust=1589011637484000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCID-8cH8oukCFQAAAAAdAAAAABAD)
 
-### 但是
+**文件功能**
+- 1. **/ - 根目录：** 每一个文件和目录都从这里开始。只有root用户具有该目录下的写权限。此目录和/root目录不同，/root目录是root用户的主目录。
+- 2. **/bin - 用户二进制文件：** 包含二进制可执行文件。系统的所有用户使用的命令都设在这里，例如：ps，ls，ping，grep，cp等。
+- 3. **/sbin - 系统二进制文件：** 就像/bin，/sbin同样也包含二进制可执行文件。但是，在这个目录下的linux命令通常由系统管理员使用，对系统进行维护。例如：iptables、reboot、fdisk、ifconfig、swapon命令。
+- 4. **/etc - 配置文件：** 包含所有程序所需的配置文件。也包含了用于启动/停止单个程序的启动和关闭shell脚本。例如：/etc/resolv.conf、/etc/logrotate.conf。
+- 5. **/dev - 设备文件：** 包含设备文件。这些包括终端设备、USB或连接到系统的任何设备。例如：/dev/tty1、/dev/usbmon0。
+- 6. **/proc - 进程信息：** 包含系统进程的相关信息。这是一个虚拟的文件系统，包含有关正在运行的进程的信息。例如：/proc/{pid}目录中包含的与特定pid相关的信息。
+- 7. **/var - 变量文件：** var代表变量文件。这个目录下可以找到内容可能增长的文件。这包括 - 系统日志文件（/var/log）;包和数据库文件（/var/lib）;电子邮件（/var/mail）;打印队列（/var/spool）;锁文件（/var/lock）;多次重新启动需要的临时文件（/var/tmp）。
+- 8. **/tmp - 临时文件：** 包含系统和用户创建的临时文件。当系统重新启动时，这个目录下的文件都将被删除。
+- 9. **/usr - 用户程序：** 包含二进制文件、库文件、文档和二级程序的源代码。
+- 10. **/usr/bin中包含用户程序的二进制文件：** 如果你在/bin中找不到用户二进制文件，到/usr/bin目录看看。例如：at、awk、cc、less、scp。
+- 11. **/usr/sbin中包含系统管理员的二进制文件：** 如果你在/sbin中找不到系统二进制文件，到/usr/sbin目录看看。例如：atd、cron、sshd、useradd、userdel。
+- 12. **/usr/lib中包含了/usr/bin和/usr/sbin用到的库**
+- 13. **/usr/local中包含了从源安装的用户程序：** 例如，当你从源安装Apache，它会在/usr/local/apache2中。
+- 14. **/home - HOME目录：** 所有用户用home目录来存储他们的个人档案。例如：/home/john、/home/nikita。
+- 15. **/boot - 引导加载程序文件：** 包含引导加载程序相关的文件。内核的initrd、vmlinux、grub文件位于/boot下。例如：initrd.img-2.6.32-24-generic、vmlinuz-2.6.32-24-generic
+- 16. **/lib - 系统库：** 包含支持位于/bin和/sbin下的二进制文件的库文件。库文件名为 ld或lib.so.*例如：ld-2.11.1.so，libncurses.so.5.7
+- 17. **/opt - 可选的附加应用程序：** opt代表opitional；包含从个别厂商的附加应用程序。附加应用程序应该安装在/opt/或者/opt/的子目录下。
+- 18. **/mnt - 挂载目录：**临时安装目录，系统管理员可以挂载文件系统。
+- 19. **/media - 可移动媒体设备：**用于挂载可移动设备的临时目录。挂载CD-ROM的/media/cdrom，挂载软盘驱动器的/media/floppy。
+- 20. **/srv - 服务数据：**srv代表服务。包含服务器特定服务相关的数据。
 
-我敲了这段代码，执行的时候发现并不会 crash~
-
-```objc
-@property (nonatomic, strong) NSString *target;
-dispatch_queue_t queue = dispatch_queue_create("parallel", DISPATCH_QUEUE_CONCURRENT);
-for (int i = 0; i < 1000000 ; i++) {
-    dispatch_async(queue, ^{
-    	// ‘ksddkjalkjd’删除了
-        self.target = [NSString stringWithFormat:@"%d",i];
-    });
-}
-```
-
-原因就出在对 `self.target` 赋值的字符串上。博客的最后也提到了 - *‘上述代码的字符串改短一些，就不会崩溃’*，还有 `Tagged Pointer` 这个东西。
-
-我们将上面的代码修改下：
-
-
-```objc
-NSString *str = [NSString stringWithFormat:@"%d", i];
-NSLog(@"%d, %s, %p", i, object_getClassName(str), str);
-self.target = str;
-```
-
-输出：
-
-```
-0, NSTaggedPointerString, 0x3015
-```
-
-发现这个字符串类型是 `NSTaggedPointerString`，那我们来看看 Tagged Pointer 是什么？
 
 ### Tagged Pointer
 
