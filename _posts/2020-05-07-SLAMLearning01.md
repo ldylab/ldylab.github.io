@@ -87,7 +87,6 @@ deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse
 - 一般在bash可以直接安装的都是在`usr/bin`文件夹中。
 - 要查找使用 `apt-get install` 安装的软件，一般会采用`dpkg -L`文件名的方式。
 
-上次看了一篇 [《从一道网易面试题浅谈OC线程安全》](https://www.jianshu.com/p/cec2a41aa0e7) 的博客，主要内容是：
 
 #### Linux的环境变量
 
@@ -138,18 +137,62 @@ Linux文件结构图
 19. **/media - 可移动媒体设备：**用于挂载可移动设备的临时目录。挂载CD-ROM的/media/cdrom，挂载软盘驱动器的/media/floppy。
 20. **/srv - 服务数据：**srv代表服务。包含服务器特定服务相关的数据。
 
+#### ubuntu为文件添加可执行权限
+为一个文件添加可执行权限：
 
-### Tagged Pointer
+```shell
+chmod +x filename
+```
 
-Tagged Pointer 详细的内容可以看这里 [深入理解Tagged Pointer](http://www.infoq.com/cn/articles/deep-understanding-of-tagged-pointer)。
+为一个文件夹下的所有文件添加可执行权限：
+```shell
+chmod +x *
+```
 
-Tagged Pointer 是一个能够提升性能、节省内存的有趣的技术。
+详细的列出文件的信息，包含所有者的信息：
+```shell
+ls -l
+```
 
-- Tagged Pointer 专门用来存储小的对象，例如 **NSNumber** 和 **NSDate**（后来可以存储小字符串）
-- Tagged Pointer 指针的值不再是地址了，而是真正的值。所以，实际上它不再是一个对象了，它只是一个披着对象皮的普通变量而已。
-- 它的内存并不存储在堆中，也不需要 malloc 和 free，所以拥有极快的读取和创建速度。
+变更文件的用户：
+```shell
+sudo chown -R  #指定的用户 要变更的文件
+```
+#### Linux删除文件：
+```shell
+rm -d 目录名 #删除一个空目录
+rmdir 目录名 #删除一个空目录
+rm -r 目录名 #删除一个非空目录
+rm 文件名    #删除文件
+```
 
+#### SLAM主流应用方向：
+- AR方向
+- 自动驾驶方向
+- 机器人定位
 
+#### SLAM定位与建图的关系，为什么要在定位的同时建图？
+为了能够让机器人自主行驶，同时能够判断是否回到了起点。
+
+#### SLAM的发展历史怎么样？分为那几个阶段？
+
+**2006**
+> Probabilistic approaches and data association
+
+**2008** 
+> Filtering approaches
+> Visual SLAM
+
+**2011** 
+> SLAM back-end
+> Observability, consistency and convergence
+
+**2012**
+> Visual odometry
+
+**2016** 
+> Multi robot SLAM
+> Visual place recognition
 
 
 ### 参考：
