@@ -1,23 +1,13 @@
-\---
-
+---
 layout:   post
-
 title:   写在2021之前
-
 subtitle:  Do yourself！
-
 date:    2021-01-01
-
 author:   Henry
-
-header-img: img/post-bg-miui6.jpg
-
+header-img: img/home-bg-art.jpg
 catalog: true
-
 tags:
-
   - Myself
-
 ---
 
 
