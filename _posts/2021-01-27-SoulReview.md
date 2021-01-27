@@ -4,7 +4,7 @@ title:   《Soul》有感
 subtitle:  Feeling about Soul
 date:    2021-01-27
 author:   Henry
-header-img: img/Soul.jpeg
+header-img: img/Soul.jpg
 catalog: false
 tags:
   - Movie
