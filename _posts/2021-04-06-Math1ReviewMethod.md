@@ -4,7 +4,7 @@ title:   数学I复习指南
 subtitle:  个人时间+正确方法论
 date:    2021-04-06
 author:   Henry
-header-img: img/post-bg-mma-5.jpeg
+header-img: img/post-bg-mma-5.jpg
 catalog: true
 tags:
   - 考研
