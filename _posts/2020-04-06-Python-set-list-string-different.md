@@ -66,17 +66,13 @@ range(5, 10)
 ```python
 >>> my_name 
 'David'
->>> my_name.upper() # 将所有的字母全部返回为大写
-
+>>> my_name.upper() # upper
 'DAVID'
->>> my_name.center(10) # 将整一个字符串变成有10个字节，并将原有的字符串居中
-
+>>> my_name.center(10) # center
 ' David '
->>> my_name.find('v') # 寻找其中字母v的个数
-
+>>> my_name.find('v') # find
 2
->>> my_name.split('v') # 将字符串利用v给间隔开来
-
+>>> my_name.split('v') # split
 ['Da', 'id']
 ```
 **字符串与列表(list)的、元组(Tuple)区别**
