@@ -67,12 +67,16 @@ range(5, 10)
 >>> my_name 
 'David'
 >>> my_name.upper() # 将所有的字母全部返回为大写
+
 'DAVID'
 >>> my_name.center(10) # 将整一个字符串变成有10个字节，并将原有的字符串居中
+
 ' David '
 >>> my_name.find('v') # 寻找其中字母v的个数
+
 2
 >>> my_name.split('v') # 将字符串利用v给间隔开来
+
 ['Da', 'id']
 ```
 **字符串与列表(list)的、元组(Tuple)区别**
@@ -137,6 +141,7 @@ for i in [1, 3, 7, 13]:
 **次数的快速实现**
 ```python
 for i in range(5): # 一共要循环5次，其中i是从0开始，在4停止
+
     print(i)
 ```
 
@@ -181,9 +186,11 @@ def __add__(self, other_fraction):
     return Fraction(new_num // common, new_den // common)
 
 # class + class 
+
 >>> f1 = Fraction(1, 4)
 >>> f2 = Fraction(1, 2)
 >>> f3 = f1 + f2 # success!
+
 >>> 3/4
 ```
 同样的该方法也是适用于其中的__eq__、__le__等等函数。
@@ -207,8 +214,10 @@ class Son(Father):
         self.name = name
 
     # 也可以采用继承父类并修改的方法：super
+
     def __init(self, name):
         super().__init__(name) # 保留原来父类中的名字
+
         self.gender = 'boy' # 并且可以增加变量
 
     def getName(self):
