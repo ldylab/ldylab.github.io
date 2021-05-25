@@ -11,7 +11,7 @@ tags:
 ---
 
 ## Python琐碎知识点
-### 列表
+### 列表(list)
 列表(list)是异构的，在[]内可以有不同数据类型，如：
 ```python
 >>> [1, 2, True, 6.5]
@@ -80,7 +80,7 @@ range(5, 10)
 ![](https://tva1.sinaimg.cn/large/008i3skNgy1gqummg0nbxj31550u0dj3.jpg)
 + 字符串也是异构类型，其与元组类型，也是不可以被修改。
 
-## 元组
+## 元组(tuple)
 元组和字符串类型，是不可以被修改的类型，其余操作和列表（list）类似：
 ```python
 >>> my_tuple = (2,True,4.96)
@@ -95,7 +95,7 @@ range(5, 10)
 >>> my_tuple[0:2] 
 (2, True)
 ```
-## 集合（Set）
+## 集合(set)
 不可修改，不能重复，无序，异构，如下所示：
 ```python
 >>> {3,6,"cat",4.5,False} 
@@ -109,7 +109,7 @@ range(5, 10)
 集的特殊操作，与数学集合计算中类似：
 ![](https://tva1.sinaimg.cn/large/008i3skNgy1gqumlkc2o9j31na0qmdi9.jpg)
 
-## 字典
+## 字典(dict)
 无序，异构，字典名字访问，使用方法如下：
 ```python
 >>> dict = {'item1' : 1, 'item2' : 2, 'item3' : 3}
@@ -131,13 +131,13 @@ range(5, 10)
 **与list的一起使用**
 ```python
 for i in [1, 3, 7, 13]:
-  print(i)
+    print(i)
 ```
 
 **次数的快速实现**
 ```python
 for i in range(5): # 一共要循环5次，其中i是从0开始，在4停止
-  print(i)
+    print(i)
 ```
 
 **列表解析式**
@@ -158,6 +158,7 @@ try的使用方法：
 ```python
 try:
   # 可能会出现的错误
+
 expect:
   # 如果真的遇到问题，就执行expect中的内容
   # 然后执行接下来的内容
@@ -179,10 +180,10 @@ def __add__(self, other_fraction):
     common = gcd(new_num, new_den) 
     return Fraction(new_num // common, new_den // common)
 
-# 然后假如两个class采用+相加时，就可以直接实现
+# class + class 
 >>> f1 = Fraction(1, 4)
 >>> f2 = Fraction(1, 2)
->>> f3 = f1 + f2 # 成立
+>>> f3 = f1 + f2 # success!
 >>> 3/4
 ```
 同样的该方法也是适用于其中的__eq__、__le__等等函数。
