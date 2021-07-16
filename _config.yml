@@ -99,16 +99,16 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "Python",
-        href: "https://www.python.org/"
+        title: "Hollowman",
+        href: "https://hollowman.ml/"
     },{
-        title: "Arduino",
-        href: "https://www.arduino.cc/"
+        title: "Javen Chen",
+        href: "https://applenob.github.io/"
     },{
-        title: "LaTex",
-        href: "https://www.latex-project.org/"
+        title: "Mirrors",
+        href: "https://mirrors.tuna.tsinghua.edu.cn/"
     },{
-        title: "Google",
-        href: "https://google.com/"
+        title: "TDS",
+        href: "https://towardsdatascience.com/"
     }
 ]
