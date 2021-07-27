@@ -1,3 +1,15 @@
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
+
 ---
 layout:     post                    # 使用的布局（不需要改）
 title:      二自由度机器人正逆解算手动实现              # 标题 
@@ -9,6 +21,10 @@ catalog: true                       # 是否归档
 tags:                               #标签
     - Technology
 ---
+
+### 公式测试
+
+\$ e = m c^2 \$
 
 > 在机器人建模中一般会使用到很多的经典的建模工具，比如ROS中直接使用Gazebo+MoveIt工具箱，Matlab中使用Robotics ToolBox等，不过自己实践建模，手动实现机器人的正逆解算对于基本功而言是非常有益的，这里主要是参考了Github项目与知乎相关文章实现对于两个自由度“机械臂”正逆解算与可视化。
 
