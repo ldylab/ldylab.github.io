@@ -39,28 +39,19 @@ tags:                               #标签
 
 ### 模型求解
 
-#### ![[公式]](https://www.zhihu.com/equation?tex=%5Ctheta_1) 求解
+#### theta0 求解
 
 ![image-20210727154356121](https://tva1.sinaimg.cn/large/008i3skNgy1gsvk8zq5scj30ku0e0t99.jpg)
 
-- 从末端执行器到机械臂底座的距离，我们记为 ![[公式]](https://www.zhihu.com/equation?tex=r) ， ![[公式]](https://www.zhihu.com/equation?tex=r) 与 ![[公式]](https://www.zhihu.com/equation?tex=x%2Cy) 有如下关系：
+- 从末端执行器到机械臂底座的距离，我们记为r ， r 与 x, y 有如下关系：
 - ![[公式]](https://www.zhihu.com/equation?tex=r%5E2+%3D+x%5E2%2By%5E2)
-- 接着，根据余弦定理， ![[公式]](https://www.zhihu.com/equation?tex=r%5E2) 又可以写成：
+- 接着，根据余弦定理， r的平方又可以写成：
 - ![[公式]](https://www.zhihu.com/equation?tex=r%5E2+%3D+%7Bl_0%7D%5E2%2B%7Bl_1%7D%5E2-2l_0l_1cos%28%5Calpha%29%3D+%7Bl_0%7D%5E2%2B%7Bl_1%7D%5E2-2l_0l_1cos%28%5Cpi-%5Ctheta_1%29)
 - 根据该式，有：
 - ![[公式]](https://www.zhihu.com/equation?tex=%5Ctheta_1+%3D+cos%5E-1%28%5Cfrac%7Bx%5E2%2By%5E2-%7Bl_0%7D%5E2-l_1%5E2%7D%7B2l_0l_1%7D%29)
 
-#### ![[公式]](https://www.zhihu.com/equation?tex=%5Ctheta_0) 求解
-
-![image-20210727154716063](https://tva1.sinaimg.cn/large/008i3skNgy1gsvk806enzj60ku0e0js102.jpg)
-
-根据该几何关系，有 ![[公式]](https://www.zhihu.com/equation?tex=%5Cbeta+%3D+%5Ctan%5E%7B-1%7D%28%5Cfrac%7Bl_1%5Csin%28%5Ctheta_1%29%7D%7Bl_0%2Bl_1%5Ccos%28%5Ctheta_1%29%7D%29) ，
-
-![image-20210727154738383](https://tva1.sinaimg.cn/large/008i3skNgy1gsvk815ag9j30ku0e0mxq.jpg)
-
-- 又 ![[公式]](https://www.zhihu.com/equation?tex=%5Cgamma+%3D+%5Ctheta_0%2B%5Cbeta) , 所以，剩余的joint angle ![[公式]](https://www.zhihu.com/equation?tex=%5Ctheta_0) 的表达如下：
-- ![[公式]](https://www.zhihu.com/equation?tex=%5Ctheta_0+%3D+%5Cgamma-%5Cbeta)
-- ![[公式]](https://www.zhihu.com/equation?tex=%5Cgamma) 又很容易得到，所以：
+#### theta1求解
+与theta0求解类似，容易得到：
 - ![[公式]](https://www.zhihu.com/equation?tex=%5Ctheta_0+%3D+%5Ctan%5E%7B-1%7D%28%5Cfrac%7By%7D%7Bx%7D%29-%5Ctan%5E%7B-1%7D%28%5Cfrac%7Bl_1%5Csin%28%5Ctheta_1%29%7D%7Bl_0%2Bl_1%5Ccos%28%5Ctheta_1%29%7D%29)
 
 程序实现（主要是参考了PythonRobotics）
