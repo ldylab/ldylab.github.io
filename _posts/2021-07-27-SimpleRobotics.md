@@ -51,7 +51,10 @@ tags:                               #标签
 - ![[公式]](https://www.zhihu.com/equation?tex=%5Ctheta_1+%3D+cos%5E-1%28%5Cfrac%7Bx%5E2%2By%5E2-%7Bl_0%7D%5E2-l_1%5E2%7D%7B2l_0l_1%7D%29)
 
 #### theta1求解
-与theta0求解类似，容易得到：
+
+![image-20210727154716063](https://tva1.sinaimg.cn/large/008i3skNgy1gsvk806enzj60ku0e0js102.jpg)
+
+根据该几何关系，与theta0求解类似，容易得到：
 - ![[公式]](https://www.zhihu.com/equation?tex=%5Ctheta_0+%3D+%5Ctan%5E%7B-1%7D%28%5Cfrac%7By%7D%7Bx%7D%29-%5Ctan%5E%7B-1%7D%28%5Cfrac%7Bl_1%5Csin%28%5Ctheta_1%29%7D%7Bl_0%2Bl_1%5Ccos%28%5Ctheta_1%29%7D%29)
 
 程序实现（主要是参考了PythonRobotics）
