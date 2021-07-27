@@ -167,8 +167,7 @@ tags:                               #标签
   ```shell
   nano ./install_pycuda.sh
   ```
-
-![image-20210727104752584](https://tva1.sinaimg.cn/large/008i3skNgy1gsvbdedx2kj31hc0dcq4w.jpg)
+  ![image-20210727104752584](https://tva1.sinaimg.cn/large/008i3skNgy1gsvbdedx2kj31hc0dcq4w.jpg)
 
 + 安装完之后应该会显示finished processing dependencies，也可以使用pip3 list去查看pycuda是否有安装成功.
 
