@@ -1,5 +1,5 @@
 ---
-layout:     keynote                    # 使用的布局（不需要改）
+layout:     post                    # 使用的布局（不需要改）
 title:      二自由度机器人正逆解算手动实现              # 标题 
 subtitle:   Robotics  #副标题
 date:       2021-07-24              # 时间
