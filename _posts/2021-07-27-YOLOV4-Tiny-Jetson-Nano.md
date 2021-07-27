@@ -153,23 +153,20 @@ tags:                               #标签
 #### 下载、安装环境
 
 + 已经有很多人利用Yolov4做了很多应用，而转换这块也已经有人完成了，所以直接使用Github上来实现即可：
-
-```shell
-$ git clone https://github.com/jkjung-avt/tensorrt_demos.git
-```
+  ```shell
+  $ git clone https://github.com/jkjung-avt/tensorrt_demos.git
+  ```
 
 + 下载后直接执行：
-
-```shell
-$ cd ${HOME}/project/tensorrt_demos/ssd
-$ ./install_pycuda.sh
+  ```shell
+  $ cd ${HOME}/project/tensorrt_demos/ssd
+  $ ./install_pycuda.sh
 ```
 
 + 将iffi中间的内容修改如下:
-
-```shell
-nano ./install_pycuda.sh
-```
+  ```shell
+  nano ./install_pycuda.sh
+  ```
 
 ![image-20210727104752584](https://tva1.sinaimg.cn/large/008i3skNgy1gsvbdedx2kj31hc0dcq4w.jpg)
 
@@ -235,5 +232,6 @@ nano ./install_pycuda.sh
 
 ### Reference
 
-\- [1] [DarkNet Yolo Github](https://github.com/AlexeyAB/darknet)
-\- [2] [Tensor RT](https://github.com/jkjung-avt/tensorrt_demos#yolov4)
+- [1] [DarkNet Yolo Github](https://github.com/AlexeyAB/darknet)
+
+- [2] [Tensor RT](https://github.com/jkjung-avt/tensorrt_demos#yolov4)
