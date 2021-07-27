@@ -229,8 +229,6 @@ tags:                               #标签
 
 + 结果：使用416维度图片，获得18左右的帧率，相比于没有使用TensorRT提高了4fps倍的帧率，还是有着非常棒的效果，不过其辨别效果相比于YoloV4下降一些，但也足够项目需求。
 
-![1](http://latex.codecogs.com/svg.latex?\int_a^bf(x)\ dx)
-
 ### Reference
 
 - [1] [DarkNet Yolo Github](https://github.com/AlexeyAB/darknet)
