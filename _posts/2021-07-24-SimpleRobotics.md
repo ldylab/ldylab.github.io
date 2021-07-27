@@ -58,7 +58,7 @@ tags:                               #标签
 根据该几何关系，与theta0求解类似，容易得到：
 - ![[公式]](https://www.zhihu.com/equation?tex=%5Ctheta_0+%3D+%5Ctan%5E%7B-1%7D%28%5Cfrac%7By%7D%7Bx%7D%29-%5Ctan%5E%7B-1%7D%28%5Cfrac%7Bl_1%5Csin%28%5Ctheta_1%29%7D%7Bl_0%2Bl_1%5Ccos%28%5Ctheta_1%29%7D%29)
 
-程序实现（主要是参考了PythonRobotics）
+### 程序实现（主要是参考了PythonRobotics）
 
 ```python
 """1.Robot Arm简单可视化"""
