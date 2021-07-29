@@ -30,9 +30,16 @@ tags:                               #标签
 
 + 都是从左上头开始，到右下角；
 
++ \$\${ }^{B} \overrightarrow{\boldsymbol{p}}\$\$ 
+
+
++ \$\$
+  { }^{B} \overrightarrow{\boldsymbol{p}}
+  \$\$
+
 + \${ }^{B} \overrightarrow{\boldsymbol{p}}\$ ：表示的是在B坐标系下，P向量的表示方法；
 
-+ \${ }^{A} \overrightarrow{\boldsymbol{p}}\$：表示的是在A坐标系下的远点，移动到另一个位置，形成B坐标系；
++ \${ }^{A} \overrightarrow{\boldsymbol{p}}_{O_{B}}\$：表示的是在A坐标系下的远点，移动到另一个位置，形成B坐标系；
 
   ![image-20210728124252079](https://tva1.sinaimg.cn/large/008i3skNgy1gsxo4mmnalj30e0089q2y.jpg)
 
