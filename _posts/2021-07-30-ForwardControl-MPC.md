@@ -1,10 +1,10 @@
 ---
 layout:     post                    # 使用的布局（不需要改）
-title:      前馈控制与MPC控制             # 标题 
+title:      前馈控制与MPC             # 标题 
 subtitle:   Forward Control and MPC  #副标题
 date:       2021-07-30              # 时间
 author:     Henry                      # 作者
-header-img: img/post-bg-os-metro    #这篇文章标题背景图片
+header-img: img/post-bg-os-metro.jpg   #这篇文章标题背景图片
 catalog: true                       # 是否归档
 tags:                               #标签
     - Technology
@@ -215,4 +215,7 @@ PID控制不考虑机器人的动力学特性，只按照偏差进行负反馈�
 
 ### Reference
 
-- [1] [Robotics公众号](https://www.guyuehome.com/author/cc)：以上很多内容从中整理，我觉得写得非常好，可以很快梳理机器人学一些知识。
+- [1] [421施公队](https://www.bilibili.com/video/BV1U54y1J7wh?from=search&seid=14955632823654831298)：非常非常佩服的超级大佬~
+- [2] [模型预测控制在纯㴀后对象中的研究](https://kns.cnki.net/KXReader/Detail?TIMESTAMP=637631881554707031&DBCODE=CJFD&TABLEName=CJFDLAST2019&FileName=DZCL201823004&RESULT=1&SIGN=b3qy%2bYcwFlpd9lxdxXlqEKEmYUY%3d#)
+
+我发现不知道为啥我的Github Page显示公式有些问题，得等有时间再来修了~！
