@@ -216,3 +216,208 @@ private:
         }
     }
 }
+
+ListNode* findFromEnd(ListNode* head, int k){
+    ListNode* p1 = head;
+    for(int i = 0; i < k; i++){
+        p1 = p1->next;
+    }
+
+    ListNode* p2 = head;
+    while(p1 != nullptr){
+        p2 = p2->next;
+        p1 = p1->next;
+    }
+
+    return p2;
+}
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        ListNode* p1 = head;
+        ListNode* dummy = nullptr;
+        for(int i = 0; i < n; i++){
+            p1 = p1->next;
+        }
+
+        ListNode* p2 = head;
+        while(p1 != nullptr){
+            dummy->next = p2;
+            p1 = p1->next;
+            p2 = p2->next;
+        }
+        p2 = p2->next;
+        while(p2 != nullptr){
+            dummy->next = p2;
+            p2 = p2->next;
+        }
+        dummy->next = nullptr;
+
+        return dummy->next;
+    }
+};
+
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        // 虚拟节点的构建
+        ListNode* dummy = new ListNode();
+        dummy->next = head;
+        ListNode* x = findFromEnd(dummy, n + 1);
+        // 删除节点的方法
+        x->next = x->next->next;
+        return dummy->next;
+    }
+
+private:
+    ListNode* findFromEnd(ListNode* head, int k){
+        ListNode* p1 = head;
+        for(int i = 0; i < k; i++){
+            p1 = p1->next;
+        }
+
+        ListNode* p2 = head;
+        while(p1 != nullptr){
+            p2 = p2->next;
+            p1 = p1->next;
+        }
+
+        return p2;
+    }
+};
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        ListNode* slow = head;
+        ListNode* fast = head;
+        while(fast != nullptr && fast->next != nullptr){
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+
+        return slow;
+    }
+};
+
+// 判断是否有环
+bool hasCycle(ListNode* head){
+    // 快慢指针初始化指向 head
+    ListNode* slow = head;
+    ListNode* fast = head;
+    // 快指针走到末尾时停止（就是只要能找到nullptr就立刻停止下来）
+    while(fast != NULL && fast->next != NULL){
+        // 慢指针走一步，快指针走两步
+        slow = slow->next;
+        fast = fast->next->next;
+        // 快慢指针相遇，说明含有环
+        if(slow == fast){
+            return true;
+        }
+    }
+
+    return false;
+}
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        
+    }
+};
+
+// 计算环的起点
+ListNode* detectCycle(ListNode* head){
+    ListNode* fast = head;
+    ListNode* slow = head;
+
+    while(fast != nullptr && fast->next != nullptr){
+        fast = fast->next->next;
+        slow = slow->next;
+        if(fast == slow) break;
+    }
+
+    // 遇到空指针就说明没有环
+    if(fast == nullptr || fast->next == nullptr){
+        return nullptr;
+    }
+
+    // 重新指向头结点
+    slow = head;
+    // 快慢指针同步前进，先交点就是环起点
+    while(slow != fast){
+        fast = fast->next;
+        slow = slow->next;
+    }
+    return slow;
+}
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        ListNode* p1 = headA;
+        ListNode* p2 = headB;
+        while(p1 != p2){
+            if(p1 == NULL){
+                p1 = headB;
+            }else{
+                p1 = p1->next;
+            }
+
+            if(p2 == NULL){
+                p2 = headA;
+            }else{
+                p2 = p2->next;
+            }
+        }
+        return p1;
+    }
+};
