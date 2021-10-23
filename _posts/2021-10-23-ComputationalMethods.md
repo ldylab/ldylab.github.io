@@ -1,6 +1,6 @@
 ---
 layout:     post                    # 使用的布局（不需要改）
-title:      数值计算-使用C++             # 标题 
+title:      数值计算：使用C++             # 标题 
 subtitle:   Computational Methods Using C++  #副标题
 date:       2021-10-23              # 时间
 author:     Henry                      # 作者
