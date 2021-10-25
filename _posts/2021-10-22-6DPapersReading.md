@@ -148,17 +148,19 @@ $$
 
 ![image-20211024152644542](https://tva1.sinaimg.cn/large/008i3skNgy1gvrc15ht45j60oq0l376o02.jpg)
 
-![image-20211024152652557](/Users/henry/Library/Application Support/typora-user-images/image-20211024152652557.png)
+![image-20211024152652557](https://tva1.sinaimg.cn/large/008i3skNgy1gvrcirkiy8j61280dqgrg02.jpg)
 
 在运行YCBInEOAT数据集时，发现作者文件中少了.obj文件，自己在添加之后也还是出现了如下问题：
 
-![image-20211024152814393](/Users/henry/Library/Application Support/typora-user-images/image-20211024152814393.png)
+![image-20211024152814393](https://tva1.sinaimg.cn/large/008i3skNgy1gvrciuqlqfj611q0f241702.jpg)
 
 在将cloud的size为0的修改暂时不写入，后能部分运行程序：
 
-![image-20211024152943373](/Users/henry/Library/Application Support/typora-user-images/image-20211024152943373.png)
+![image-20211024152943373](https://tva1.sinaimg.cn/large/008i3skNgy1gvrcixo6bwj61400p0th002.jpg)
 
-目前遇到的问题可能是由于作者提供的数据缺失部分文件，已经邮件咨询作者并在github中issue中反馈，并也看到了有人在issue反馈中提到了和我一样遇到的问题，不过目前作者并还有对此问题进行回复。
+目前遇到的问题可能是由于作者提供的数据缺失部分文件，已经邮件咨询并在github中issue中反馈，并也看到了有人在issue反馈中提到了和我一样遇到的问题，不过目前作者并还有对此问题进行回复。
+
+
 
 
 
@@ -342,6 +344,7 @@ $$
   + BundleTrack: 6D Pose Tracking for Novel Objects without Instance or Category-Level 3D Models(https://arxiv.org/abs/2108.00516)（开源）
 
 
+### Reference
 - [1] [BundleTrack论文](https://arxiv.org/abs/2108.00516)
 - [2] [6-PACK论文](https://arxiv.org/abs/1910.10750)
 - [3] [NOCS论文](https://arxiv.org/abs/1901.02970)
