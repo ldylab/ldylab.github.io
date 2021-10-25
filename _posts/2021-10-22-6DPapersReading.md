@@ -326,6 +326,7 @@ $$
 
 ### Paper4：Deep-6DPose: Recovering 6D Object Pose from a Single RGB Image
 
+还在读ing
 
 ### 主流6D位姿估计方法总结：
 
