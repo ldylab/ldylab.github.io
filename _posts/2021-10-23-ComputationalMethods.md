@@ -25,11 +25,13 @@ $$
 插值的原理最简单的来说，就是给定了多少个$x - y$ 的对应关系，然后根据对应关系式子联立，然后解出其中每一个不同幂次$x$的系数大小即可：
 
 + 利用不同的对应关系：
+
   $$
   \left(x_{0}, f\left(x_{0}\right)\right),\left(x_{1}, f\left(x_{1}\right)\right),\left(x_{2}, f\left(x_{2}\right)\right),\left(x_{3}, f\left(x_{3}\right)\right)
   $$
 
 + 解出式子中$a_0, a_1, a_2, ..., a_n$的数值大小：
+
   $$
   f(x)=a_{0}+a_{1} x+a_{2} x^{2}+\cdots+a_{n} x^{n}
   $$
@@ -47,10 +49,13 @@ $$
 + 抽象例子：
 
   通过n点的Lagrange插值法的公式如下：
+
   $$
   P(x)=\sum_{k=0}^{n} L_{n, k}(x) f\left(x_{k}\right)
   $$
+
   其中：
+  
   $$
   \begin{gathered}
   L_{n, k}(x)=\prod_{i=0 \atop i \neq k}^{n} \frac{x-x_{i}}{x_{k}-x_{i}}, \quad k=0,1,2, \cdots, n \\
