@@ -95,20 +95,6 @@ $$
       }
   };
   
-  // 测试函数
-  int main()
-  {
-      LagrangeInterpolate LI;
-      
-      // 已经知道的点
-      LagrangeInterpolate::Data f[] = {{0,2}, {1,3}, {2,12}, {5,147}};
-      
-      // 插值结果
-      cout << LI.Interpolate(f, 3, 4) << endl;
-  
-      return 0;
-  }
-  
   // todo: 其中的输入已知xy的数量要实现自动计算
   ```
 
@@ -128,4 +114,4 @@ $$
 
 ### Reference
 
-- [1] [数值计算-电子书]( )
+- [1] [数值计算-电子书](https://www.jianshu.com/p/fb0cb9affe19)
