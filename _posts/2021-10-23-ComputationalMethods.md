@@ -64,40 +64,6 @@ $$
 
   ![image-20211023215100043](https://tva1.sinaimg.cn/large/008i3skNgy1gvpn10ur8oj61fp0u0gsz02.jpg)
 
-  ```c++
-  // C++ program for implementation of Lagrange's Interpolation
-  #include <iostream>
-  using namespace std;
-  
-  class LagrangeInterpolate{
-  public:
-      struct Data{
-          double x, y;
-      };
-  
-  public:
-      // parm1：输入已知点
-      // parm2：输入想求解的点
-      // parm3: 已知道点的个数
-      double Interpolate(Data f[], double x_i, int f_n){
-          double result = 0;
-  
-          for(int i = 0; i < f_n; i++){
-              double term = f[i].y; // 作为公式中的f(x_n) 参数
-              for(int j = 0; j < f_n; j++){
-                  if(j != i){
-                      term = term * (x_i - f[j].x) / double(f[i].x - f[j].x); // 分子分母的迭代过程，对应拉格朗日的通式
-                  }
-              }
-              result += term;
-          }
-          return result;
-      }
-  };
-  
-  // todo: 其中的输入已知xy的数量要实现自动计算
-  ```
-
   > **Note：**
   >
   > 结构体数组在作为参数传入函数时，是只是作为一个8bit的指针而已，并不代表原来的结构体数组；这个暂时不理解，并对编程有不小影响，要解决一下（2021/10/23）
