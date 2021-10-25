@@ -55,7 +55,7 @@ $$
   $$
 
   其中：
-  
+
   $$
   \begin{gathered}
   L_{n, k}(x)=\prod_{i=0 \atop i \neq k}^{n} \frac{x-x_{i}}{x_{k}-x_{i}}, \quad k=0,1,2, \cdots, n \\
@@ -131,6 +131,34 @@ $$
   > }
   > {% endraw %}
   > ```
+
+#### 1.3、Lagrange插值算法的公式与误差问题
+
+Lagrange 揷值法的公式虽然能保证一定会通过所有已知的 $n+1$​ 点, 也就是说, 能通过 $\left(x_{0}, f\left(x_{0}\right)\right),\left(x_{1}, f\left(x_{1}\right)\right), \cdots,\left(x_{n}, f\left(x_{n}\right)\right)$​ 。
+
+因此, $x_{0}, x_{1}, \cdots, x_{n}$ 的不同点原本要满足 $y=f(x)=\log _{\mathrm{e}} x$ (已知函数)的函数关系，同时也会满足Lagrange插值法的公式：
+
+$$
+P(x)=\sum_{k=0}^{n} L_{n, k}(x) f\left(x_{k}\right)
+$$
+
+也就是说, $P\left(x_{0}\right)=f\left(x_{0}\right), P\left(x_{1}\right)=f\left(x_{1}\right), \cdots, P\left(x_{n}\right)=f\left(x_{n}\right)$​，所以现实中所经过的点其实并不一定说会结果上述式子中，故其一定是存在一定误差的：
+
+$$
+e(x)=f^{(n+1)}(\xi) \frac{\left(x-x_{0}\right)\left(x-x_{1}\right) \cdots\left(x-x_{n}\right)}{(n+1) !}, x_{0}<\xi<x_{n}
+$$
+
+其结论为：
+
+已知 $f(x)$ 或 $f^{(n+1)}\left(x_{m}\right)$ 的值, 则可使用下面式计算 $e(x)$​ 的近似值：
+
+$$
+e(x)=\left(x-x_{0}\right)\left(x-x_{1}\right) \cdots\left(x-x_{n}\right) \frac{f^{(n+1)}\left(x_{m}\right)}{(n+1) !}
+$$
+
+其中$x_{m}=\frac{x_{0}+x_{n}}{2}$​, 先决条件是 $D=x_{n}-x_{0}, D$​​ 不可太大。
+
+#### 1.4、牛顿插值算法
 
 ### Reference
 
