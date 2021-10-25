@@ -333,18 +333,18 @@ $$
 ### 主流6D位姿估计方法总结：
 
 + **需要每一个物体CAD实例（Instance-Level）**
-  + DenseFusion: 6D Object Pose Estimation by Iterative Dense Fusion(https://arxiv.org/abs/1901.04780)
-  + PVN3D: A Deep Point-wise 3D Keypoints Voting Network for 6DoF Pose Estimation(https://arxiv.org/abs/1911.04231)
-  + FFB6D: A Full Flow Bidirectional Fusion Network for 6D Pose Estimation(https://arxiv.org/abs/2103.02242)
+  + **DenseFusion:** 6D Object Pose Estimation by Iterative Dense Fusion(https://arxiv.org/abs/1901.04780)
+  + **PVN3D:** A Deep Point-wise 3D Keypoints Voting Network for 6DoF Pose Estimation(https://arxiv.org/abs/1911.04231)
+  + **FFB6D:** A Full Flow Bidirectional Fusion Network for 6D Pose Estimation(https://arxiv.org/abs/2103.02242)
 + **需要一类物品的CAD模型（Category-Level）**
-  + NOCS：Normalized Object Coordinate Space for Category-Level 6D Object Pose and Size Estimation(https://arxiv.org/abs/1901.02970)（开源）
-  + 6-PACK: Category-level 6D Pose Tracker with Anchor-Based Keypoints(https://arxiv.org/abs/1910.10750)（开源）
-  + Shape Prior Deformation for Categorical 6D Object Pose and Size Estimation(https://arxiv.org/abs/2007.08454)（开源）
+  + **NOCS：**Normalized Object Coordinate Space for Category-Level 6D Object Pose and Size Estimation(https://arxiv.org/abs/1901.02970)**（开源）**
+  + **6-PACK:** Category-level 6D Pose Tracker with Anchor-Based Keypoints(https://arxiv.org/abs/1910.10750)**（开源）**
+  + Shape Prior Deformation for Categorical 6D Object Pose and Size Estimation(https://arxiv.org/abs/2007.08454)**（开源）**
   + Category Level Object Pose Estimation via Neural Analysis-by-Synthesis(https://arxiv.org/abs/2008.08145)
 
 + **不需要CAD模型，只是采用RGB-D或是纯粹RGB图像**（较少）
-  + Deep-6DPose: Recovering 6D Object Pose from a Single RGB Image(https://arxiv.org/abs/1802.10367v1)（程序暂时未开源）
-  + BundleTrack: 6D Pose Tracking for Novel Objects without Instance or Category-Level 3D Models(https://arxiv.org/abs/2108.00516)（开源）
+  + **Deep-6DPose:** Recovering 6D Object Pose from a Single RGB Image(https://arxiv.org/abs/1802.10367v1)**（程序暂时未开源）**
+  + **BundleTrack:** 6D Pose Tracking for Novel Objects without Instance or Category-Level 3D Models(https://arxiv.org/abs/2108.00516)**（开源）**
 
 
 ### Reference
