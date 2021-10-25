@@ -65,6 +65,7 @@ $$
   ![image-20211023215100043](https://tva1.sinaimg.cn/large/008i3skNgy1gvpn10ur8oj61fp0u0gsz02.jpg)
 
   ```c++
+  {% raw %}
   // C++ program for implementation of Lagrange's Interpolation
   #include <iostream>
   using namespace std;
@@ -108,6 +109,7 @@ $$
   
       return 0;
   }
+  {% endraw %}
   ```
 
   > **Note：**
