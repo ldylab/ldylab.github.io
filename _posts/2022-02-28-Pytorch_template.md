@@ -78,7 +78,7 @@ def get_dataset_by_type(args, is_train=False):
 
 如果你有更多的dataset，可以继续扩展这个字典，字典访问是O(1)的，也可以避免一堆if-else的判断。有了dataset，再用pytorch的`dataloader`接口包一下，可以支持`shuffle`，多线程加载数据，非常方便。
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24egy1gzt73463jgj20vz0u0q51.jpg" alt="image-20220228132659975" style="zoom:50%;" />
+![image-20220228142056892](https://tva1.sinaimg.cn/large/e6c9d24egy1gzt7e2iov0j20vz0u0mz9.jpg)
 
 后续会将「图像增强」相关函数进一步封装一下，因为很多数据集的图像增强基本是一样的。
 
@@ -88,7 +88,7 @@ def get_dataset_by_type(args, is_train=False):
 
 我们所构建的网络模型，还是和`data_entry`一样，模型也是利用字典方式，选择我们需要的模型，依然支持拓展，非常方便：
 
-<img src="https://tva1.sinaimg.cn/large/e6c9d24egy1gzt738t90hj20w30u075s.jpg" alt="image-20220228133836681" style="zoom:50%;" />
+![image-20220228142036335](https://tva1.sinaimg.cn/large/e6c9d24egy1gzt7dzpp9vj20w30u0400.jpg)
 
 同时对于很多`model`而言，有不少的网络结构都是一致的，所以设计一些小模型在`submodules.py`方便各种`model`的调用。
 
