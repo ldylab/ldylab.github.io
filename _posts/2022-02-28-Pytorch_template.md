@@ -21,13 +21,21 @@ tags:                               #标签
 ```python
 pytorch_base_template
 ├── checkpoints # 存放模型结构参数（.pth）和tensorBoard的可视化文件
+
 ├── data        # 定义各种用于训练测试的dataset
+
 ├── model       # 定义各种实验中的模型
+
 ├── scripts     # 各种训练，测试脚本
+
 ├── utils       # 各种工具代码
+
 ├── options.py  # 定义各种实验参数，以命令行形式传入
+
 ├── train.py    # 训练代码
+
 ├── eval.py     # 测试验证代码，并能够把结果可视化
+
 └── README.md   # 介绍一下自己的repo
 ```
 
@@ -39,14 +47,17 @@ pytorch_base_template
 
 ```python
 # 训练和测试时，一些共用的参数
+
 def parse_common_args(parser):
   pass
 
 # 只给到训练的参数
+
 def parse_train_args(parser):
   pass
 
 # 只给到测试的参数
+
 def parse_test_args(parser):
   pass
 ```
@@ -115,7 +126,9 @@ def get_dataset_by_type(args, is_train=False):
 ```python
 def train(self):
   for epoch in range(self.args.epochs):
+    
     # train for one epoch
+
     self.train_per_epoch(epoch)
     self.val_per_epoch(epoch)
     self.val_amp_per_epoch(epoch)
